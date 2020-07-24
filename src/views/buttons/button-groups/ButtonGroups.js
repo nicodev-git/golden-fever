@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   CButton,
   CDropdown,
@@ -16,8 +16,8 @@ import {
   CInputGroupPrepend,
   CInputGroupText,
   CRow,
-  CCallout
-} from '@coreui/react'
+  CCallout,
+} from "@coreui/react"
 
 const ButtonGroups = () => {
   return (
@@ -27,15 +27,18 @@ const ButtonGroups = () => {
           <CCardHeader>
             Callout
             <div className="card-header-actions">
-              <a href="https://coreui.github.io/components/button-group/" rel="noreferrer noopener" target="_blank" className="card-header-action">
+              <a
+                href="https://coreui.github.io/components/button-group/"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="card-header-action"
+              >
                 <small className="text-muted">docs</small>
               </a>
             </div>
           </CCardHeader>
           <CCardBody>
-            <CCallout color="primary">
-              Callout
-            </CCallout>
+            <CCallout color="primary">Callout</CCallout>
           </CCardBody>
         </CCard>
 
@@ -43,7 +46,12 @@ const ButtonGroups = () => {
           <CCardHeader>
             Button Group
             <div className="card-header-actions">
-              <a href="https://coreui.github.io/components/button-group/" rel="noreferrer noopener" target="_blank" className="card-header-action">
+              <a
+                href="https://coreui.github.io/components/button-group/"
+                rel="noreferrer noopener"
+                target="_blank"
+                className="card-header-action"
+              >
                 <small className="text-muted">docs</small>
               </a>
             </div>
@@ -123,10 +131,8 @@ const ButtonGroups = () => {
             </CButtonGroup>
           </CCardBody>
         </CCard>
-
       </CCol>
       <CCol md={6}>
-
         <CCard>
           <CCardHeader>
             Button Group
@@ -138,13 +144,15 @@ const ButtonGroups = () => {
               <CButton color="secondary">Middle</CButton>
               <CButton color="secondary">Right</CButton>
             </CButtonGroup>
-            <br /><br />
+            <br />
+            <br />
             <CButtonGroup>
               <CButton color="secondary">Left</CButton>
               <CButton color="secondary">Middle</CButton>
               <CButton color="secondary">Right</CButton>
             </CButtonGroup>
-            <br /><br />
+            <br />
+            <br />
             <CButtonGroup size="sm">
               <CButton color="secondary">Left</CButton>
               <CButton color="secondary">Middle</CButton>

@@ -1,1 +1,18 @@
 // Variable overrides
+
+@font-face {
+    font-family: PasseroOne;
+    src: url('../assets/fonts/passero_one/PasseroOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url('../assets/fonts/oswald/Oswald-VariableFont_wght.ttf');
+}
+
+
+$font-family-base: PasseroOne !important;
+
+$text-default: #f2be43;
+$text-default-light: #fff5af;
+$text-default-dark: #fdf3ad;

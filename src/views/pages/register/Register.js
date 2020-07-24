@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   CButton,
   CCard,
@@ -11,9 +11,9 @@ import {
   CInputGroup,
   CInputGroupPrepend,
   CInputGroupText,
-  CRow
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+  CRow,
+} from "@coreui/react"
+import CIcon from "@coreui/icons-react"
 
 const Register = () => {
   return (
@@ -32,7 +32,11 @@ const Register = () => {
                         <CIcon name="cil-user" />
                       </CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="text" placeholder="Username" autoComplete="username" />
+                    <CInput
+                      type="text"
+                      placeholder="Username"
+                      autoComplete="username"
+                    />
                   </CInputGroup>
                   <CInputGroup className="mb-3">
                     <CInputGroupPrepend>
@@ -46,7 +50,11 @@ const Register = () => {
                         <CIcon name="cil-lock-locked" />
                       </CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="password" placeholder="Password" autoComplete="new-password" />
+                    <CInput
+                      type="password"
+                      placeholder="Password"
+                      autoComplete="new-password"
+                    />
                   </CInputGroup>
                   <CInputGroup className="mb-4">
                     <CInputGroupPrepend>
@@ -54,18 +62,28 @@ const Register = () => {
                         <CIcon name="cil-lock-locked" />
                       </CInputGroupText>
                     </CInputGroupPrepend>
-                    <CInput type="password" placeholder="Repeat password" autoComplete="new-password" />
+                    <CInput
+                      type="password"
+                      placeholder="Repeat password"
+                      autoComplete="new-password"
+                    />
                   </CInputGroup>
-                  <CButton color="success" block>Create Account</CButton>
+                  <CButton color="success" block>
+                    Create Account
+                  </CButton>
                 </CForm>
               </CCardBody>
               <CCardFooter className="p-4">
                 <CRow>
                   <CCol xs="12" sm="6">
-                    <CButton className="btn-facebook mb-1" block><span>facebook</span></CButton>
+                    <CButton className="btn-facebook mb-1" block>
+                      <span>facebook</span>
+                    </CButton>
                   </CCol>
                   <CCol xs="12" sm="6">
-                    <CButton className="btn-twitter mb-1" block><span>twitter</span></CButton>
+                    <CButton className="btn-twitter mb-1" block>
+                      <span>twitter</span>
+                    </CButton>
                   </CCol>
                 </CRow>
               </CCardFooter>
