@@ -63,7 +63,7 @@ const TheHeader = () => {
           <CHeaderNavLink>Exchange</CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
-          <CHeaderNavLink>Wallet</CHeaderNavLink>
+          <CHeaderNavLink to="/wallet">Wallet</CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
           <div className="d-flex">
