@@ -1,0 +1,22 @@
+.choose-item {
+	.add-btn {
+		max-width: 45px !important;
+		width: 45px !important;
+		min-width: 45px !important;
+		height: 45px !important;
+		top: 7px;
+		text-align: center;
+		background-image: url("../../assets/images/plusBg.png") !important;
+	}
+
+	.add-btn:hover {
+		box-shadow: none !important;
+
+	}
+
+	.btn-layer {
+		top: 0;
+		height: 50px;
+		width: 100%;
+	}
+}

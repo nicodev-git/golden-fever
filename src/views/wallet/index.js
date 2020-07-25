@@ -13,6 +13,8 @@ import {
   CInput,
 } from "@coreui/react"
 import CIcon from "@coreui/icons-react"
+import ChooseItem from "components/chooseItem/ChooseItem"
+import KeyGenerator from "components/keyGenerator/KeyGenerator"
 
 import cartIcon from "assets/images/cart.png"
 import goldIcon from "assets/images/gold.png"
@@ -20,7 +22,7 @@ import julsIcon from "assets/images/juls.png"
 
 const Wallet = ({ match }) => {
   return (
-    <div className="pb-5">
+    <div className="pb-5 mb-5">
       <CRow>
         <CCol lg={12}>
           <div className="d-flex justify-content-end mt-2">
@@ -40,46 +42,40 @@ const Wallet = ({ match }) => {
             </div>
           </div>
         </CCol>
-        <CCol lg={9} className="mx-auto p-3">
+        <CCol lg={10} className="mx-auto p-3">
           <h3>Your wallet:</h3>
           <hr />
           <section className="pt-4 pb-2">
-            <CRow>
-              <CCol lg={3}>
+            <div className="d-flex">
+              <div className="mr-5">
                 <>
-                  <div>
+                  <div className="position-relative">
+                    <div className="gradient-bg position-absolute left-edge"/>
                     <h1>
                       <span>NGL</span>
                       <span className="text-primary-light ml-4">2300</span>
                     </h1>
                   </div>
-                  <CRow className="py-3">
-                    <CCol lg={6}>
-                      <CButton color="primary">Buy</CButton>
-                    </CCol>
-                    <CCol lg={6}>
-                      <CButton color="primary">Sell</CButton>
-                    </CCol>
-                  </CRow>
+                  <div className="d-flex pt-3">
+                    <CButton color="primary" className="mr-4">Buy</CButton>
+                    <CButton color="primary">Sell</CButton>
+                  </div>
                 </>
                 <>
-                  <div className="mt-4">
+                  <div className="mt-4 position-relative">
+                    <div className="gradient-bg position-absolute left-edge"/>
                     <h1>
                       <span>ETH</span>
                       <span className="text-primary-light ml-4">1090</span>
                     </h1>
                   </div>
-                  <CRow className="py-3">
-                    <CCol lg={6}>
-                      <CButton color="primary">Buy</CButton>
-                    </CCol>
-                    <CCol lg={6}>
-                      <CButton color="primary">Sell</CButton>
-                    </CCol>
-                  </CRow>
+                  <div className="d-flex pt-3">
+                    <CButton color="primary" className="mr-4">Buy</CButton>
+                    <CButton color="primary">Sell</CButton>
+                  </div>
                 </>
-              </CCol>
-              <CCol lg={9}>
+              </div>
+              <div>
                 <h4 className="text-primary-light f-oswald">
                   Aliquam enim eros, egestas eget maximus eget, laoreet et lectus.
                   Vestibulum orci elit, bibendum id lectus non, posuere scelerisque
@@ -102,8 +98,8 @@ const Wallet = ({ match }) => {
                   lacinia tortor in suscipit. Suspendisse erat massa, suscipit sed
                   metus ut, eleifend auctor purus. Suspendisse potenti.
                 </h4>
-              </CCol>
-            </CRow>
+              </div>
+            </div>
             <CRow className="mt-5">
               <CCol lg={6}>
                 <CForm
@@ -113,67 +109,74 @@ const Wallet = ({ match }) => {
                   className="form-horizontal"
                 >
                   <CFormGroup row>
-                    <CCol md="3" className="d-flex align-items-end mb-3">
-                      <CLabel className="d-flex align-items-center justify-content-center">
-                        Send NGL{" "}
-                        <img
-                          className="ml-3"
-                          src={goldIcon}
-                          width="20"
-                          height="25"
-                        />
-                      </CLabel>
-                    </CCol>
-                    <CCol xs="12" md="9">
-                      <CRow>
-                        <CCol lg={3}>
-                          <CFormGroup>
-                            <p htmlFor="country" className="mb-0 text-center">
-                              Quantity
-                            </p>
-                            <CInput id="country" placeholder="Country name" />
-                          </CFormGroup>
-                        </CCol>
-                        <CCol lg={6}>
-                          <CFormGroup>
-                            <p htmlFor="country" className="mb-0 text-center">
-                              Player name / Address
-                            </p>
-                            <CInput id="country" placeholder="Country name" />
-                          </CFormGroup>
-                        </CCol>
-                        <CCol lg={3} className="d-flex align-items-end mb-4">
-                          <CButton color="primary">Send</CButton>
-                        </CCol>
-                      </CRow>
+                    <CCol lg={12}>
+                      <div className="d-flex">
+                        <CLabel 
+                          className="d-flex align-items-center mt-4"
+                          style={{minWidth: 200}}
+                        >
+                          Send NGL{" "}
+                          <img
+                            className="ml-3"
+                            src={goldIcon}
+                            width="20"
+                            height="25"
+                          />
+                        </CLabel>
+                        <CRow style={{flex:1}}>
+                          <CCol md={12} lg={4}  className="pr-0">
+                            <CFormGroup>
+                              <p htmlFor="country" className="mb-0 text-center">
+                                Quantity
+                              </p>
+                              <CInput id="country" className="text-center"/>
+                            </CFormGroup>
+                          </CCol>
+                          <CCol md={12} lg={8} >
+                            <CFormGroup>
+                              <p htmlFor="country" className="mb-0 text-center">
+                                Player name / Address
+                              </p>
+                              <CInput id="country" className="text-center"/>
+                            </CFormGroup>
+                          </CCol>
+                        </CRow>
+                        <div className="d-flex align-items-center mt-3">
+                          <CButton color="primary" className="ml-3">Send</CButton>
+                        </div>
+                        
+                      </div>
                     </CCol>
                   </CFormGroup>
                   <CFormGroup row>
-                    <CCol md="3" className="d-flex align-items-end mb-3">
-                      <CLabel className="d-flex align-items-center justify-content-center">
-                        Receive NGL{" "}
-                        <img
-                          className="ml-1"
-                          src={goldIcon}
-                          width="20"
-                          height="25"
-                        />
-                      </CLabel>
-                    </CCol>
-                    <CCol xs="12" md="9">
-                      <CRow>
-                        <CCol lg={9}>
-                          <CFormGroup>
-                            <p htmlFor="country" className="mb-0 text-center"></p>
-                            <CInput id="country" placeholder="Country name" />
-                          </CFormGroup>
-                        </CCol>
-                        <CCol lg={3} className="d-flex align-items-end mb-4">
-                          <CButton color="primary">Copy code</CButton>
-                        </CCol>
-                      </CRow>
+                    <CCol lg={12}>
+                      <div className="d-flex align-items-center">
+                        <CLabel 
+                          className="d-flex align-items-center mt-2"
+                          style={{minWidth: 200}}
+                        >
+                          Receive NGL{" "}
+                          <img
+                            className="ml-3"
+                            src={goldIcon}
+                            width="20"
+                            height="25"
+                          />
+                        </CLabel>
+                        <CRow style={{flex:1}}>
+                          <CCol lg={12}>
+                            <CFormGroup className="mb-0">
+                              <CInput id="country" className="text-center"/>
+                            </CFormGroup>
+                          </CCol>
+                        </CRow>
+                        <div className="d-flex align-items-center">
+                          <CButton color="primary" className="ml-3">Copy code</CButton>
+                        </div>
+                      </div>
                     </CCol>
                   </CFormGroup>
+
                 </CForm>
               </CCol>
               <CCol lg={6}>
@@ -184,57 +187,88 @@ const Wallet = ({ match }) => {
                   className="form-horizontal"
                 >
                   <CFormGroup row>
-                    <CCol md="3" className="d-flex align-items-end mb-3">
-                      <CLabel className="d-flex align-items-center justify-content-center">
-                        Send Item
-                      </CLabel>
-                    </CCol>
-                    <CCol xs="12" md="9">
-                      <CRow>
-                        <CCol lg={3}>
-                          <CFormGroup>
-                            <p htmlFor="country" className="mb-0 text-center">
-                              Quantity
-                            </p>
-                            <CInput id="country" placeholder="Country name" />
-                          </CFormGroup>
-                        </CCol>
-                        <CCol lg={6}>
-                          <CFormGroup>
-                            <p htmlFor="country" className="mb-0 text-center">
-                              Player name / Address
-                            </p>
-                            <CInput id="country" placeholder="Country name" />
-                          </CFormGroup>
-                        </CCol>
-                        <CCol lg={3} className="d-flex align-items-end mb-4">
-                          <CButton color="primary">Send</CButton>
-                        </CCol>
-                      </CRow>
+                    <CCol lg={12}>
+                      <div className="d-flex">
+                        <CLabel 
+                          className="d-flex align-items-center mt-4"
+                          style={{minWidth: 200}}
+                        >
+                          Send Item{" "}
+                         
+                        </CLabel>
+                        <CRow style={{flex:1}}>
+                          <CCol md={12} lg={4}  className="pr-0">
+                            <CFormGroup>
+                              <p htmlFor="country" className="mb-0 text-center">
+                                Choose item
+                              </p>
+                              <ChooseItem/>
+                            </CFormGroup>
+                          </CCol>
+                          <CCol md={12} lg={8} >
+                            <CFormGroup>
+                              <p htmlFor="country" className="mb-0 text-center">
+                                Player name / Address
+                              </p>
+                              <CInput id="country" className="text-center"/>
+                            </CFormGroup>
+                          </CCol>
+                        </CRow>
+                        <div className="d-flex align-items-center mt-3">
+                          <CButton color="primary" className="ml-3">Send</CButton>
+                        </div>
+                        
+                      </div>
                     </CCol>
                   </CFormGroup>
                   <CFormGroup row>
-                    <CCol md="3" className="d-flex align-items-end mb-3">
-                      <CLabel className="d-flex align-items-center justify-content-center">
-                        Receive Item
-                      </CLabel>
-                    </CCol>
-                    <CCol xs="12" md="9">
-                      <CRow>
-                        <CCol lg={9}>
-                          <CFormGroup>
-                            <CInput id="country" placeholder="Country name" />
-                          </CFormGroup>
-                        </CCol>
-                        <CCol lg={3} className="d-flex align-items-end mb-4">
-                          <CButton color="primary">Copy code</CButton>
-                        </CCol>
-                      </CRow>
+                    <CCol lg={12}>
+                      <div className="d-flex align-items-center">
+                        <CLabel 
+                          className="d-flex align-items-center mt-2"
+                          style={{minWidth: 200}}
+                        >
+                          Receive Item{" "}
+                          
+                        </CLabel>
+                        <CRow style={{flex:1}}>
+                          <CCol lg={12}>
+                            <CFormGroup className="mb-0">
+                              <CInput id="country" className="text-center"/>
+                            </CFormGroup>
+                          </CCol>
+                        </CRow>
+                        <div className="d-flex align-items-center">
+                          <CButton color="primary" className="ml-3">Copy code</CButton>
+                        </div>
+                      </div>
                     </CCol>
                   </CFormGroup>
                 </CForm>
               </CCol>
             </CRow>
+            <CFormGroup row className="mt-3">
+              <CCol lg={12}>
+                <div className="d-flex align-items-center">
+                  <CLabel 
+                    className="d-flex align-items-center mt-2"
+                    style={{minWidth: 200}}
+                  >
+                    Ethereum key
+                  </CLabel>
+                  <CRow style={{flex:1}}>
+                    <CCol lg={12}>
+                      <CFormGroup className="mb-0">
+                        <KeyGenerator/>
+                      </CFormGroup>
+                    </CCol>
+                  </CRow>
+                  <div className="d-flex align-items-center">
+                    <CButton color="primary" className="ml-3" disabled>Copy code</CButton>
+                  </div>
+                </div>
+              </CCol>
+            </CFormGroup>
           </section>
           <hr />
         </CCol>
