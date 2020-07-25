@@ -1,0 +1,12 @@
+.custom-dropdown {
+	.dropdown-menu {
+		background: #3c3629ad;
+		border: none;
+
+		.dropdown-item:hover,
+		.dropdown-item.active {
+			background-color: #fff5af21;
+			color: #fff5af !important;
+		}
+	}
+}

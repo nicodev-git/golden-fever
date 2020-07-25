@@ -4,6 +4,47 @@ html, body, h1, h2, h3, h4, h5, h6, p, a, span, label {
 	color: $text-default !important; 
 }
 
+/* Button Style */
+button {
+	background-image: url('../assets/images/buttonBk.png');
+	background-size: 100% 100%;
+	background-color: transparent !important;
+	border: none !important;
+	height: 37px !important;
+	padding: 5px 15px !important;
+	color: #120c05 !important;
+	font-size: 20px !important;
+	outline: none !important;
+}
+
+button.btn-md { min-width: 150px; }
+button.btn-sm { min-width: 80px; }
+
+.btn.disabled, .btn:disabled {
+	opacity: 0.4;
+}
+
+button.dropdown-toggle {
+	background-image: none !important;
+	color: $text-default !important;
+}
+
+button.dropdown-toggle:hover{
+	box-shadow: none !important;
+}
+
+button.dropdown-toggle::after {
+	margin-left: 0.5em !important;
+	margin-top: 0.5em !important;
+	vertical-align: 0.1em;
+}
+
+button:hover {
+	transition: 0.3s;
+	box-shadow: 0px 5px 41px -2px rgba(255, 255, 255, 0.4);
+}
+
+
 p {
 	font-size: 20px;
 }
@@ -27,6 +68,11 @@ p {
 	color: $text-default-light !important; 
 }
 
+.text-coupon {
+	opacity: 0.5;
+	text-decoration: line-through;
+}
+
 a:hover {
 	transition: 0.3s;
 	color: $text-default-light !important;
@@ -34,28 +80,6 @@ a:hover {
 
 .form-group label {
 	font-size: 26px;
-}
-
-button {
-	background-image: url('../assets/images/buttonBk.png');
-	background-size: 100% 100%;
-	background-color: transparent !important;
-	border: none !important;
-	height: 37px !important;
-	padding: 5px 15px !important;
-	min-width: 150px;
-	color: #120c05 !important;
-	font-size: 20px !important;
-	outline: none !important;
-}
-
-.btn.disabled, .btn:disabled {
-	opacity: 0.4;
-}
-
-button:hover {
-	transition: 0.3s;
-	box-shadow: 0px 5px 41px -2px rgba(255, 255, 255, 0.4);
 }
 
 input {

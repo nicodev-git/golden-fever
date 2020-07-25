@@ -1,0 +1,17 @@
+.store-page {
+	.item-card {
+		p {
+			font-size: 18px !important;
+			height: 100px;
+			overflow: hidden;
+		}
+		// max-width: 315px;
+		transition: opacity 200ms linear;
+	}
+
+	.item-card:hover {
+		transition: 0.3s;
+		background-image: url('../../assets/images/selectedItemBg.png');
+		background-size: 100% 100%;
+	}
+}
