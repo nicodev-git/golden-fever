@@ -30,7 +30,7 @@ const Wallet = ({ match }) => {
           <GeneralInfo />
         </CCol>
         <CCol lg={10} className="mx-auto p-3">
-          <h3>Your wallet:</h3>
+          <h4>Your wallet:</h4>
           <hr />
           <section className="pt-4 pb-2">
             <div className="d-flex">
@@ -38,10 +38,10 @@ const Wallet = ({ match }) => {
                 <>
                   <div className="position-relative">
                     <div className="gradient-bg position-absolute left-edge" />
-                    <h1>
+                    <h2>
                       <span>NGL</span>
                       <span className="text-primary-light ml-4">2300</span>
-                    </h1>
+                    </h2>
                   </div>
                   <div className="d-flex pt-3">
                     <CButton color="primary" className="mr-4" size="md">
@@ -55,10 +55,10 @@ const Wallet = ({ match }) => {
                 <>
                   <div className="mt-4 position-relative">
                     <div className="gradient-bg position-absolute left-edge" />
-                    <h1>
+                    <h2>
                       <span>ETH</span>
                       <span className="text-primary-light ml-4">1090</span>
-                    </h1>
+                    </h2>
                   </div>
                   <div className="d-flex pt-3">
                     <CButton color="primary" className="mr-4" size="md">
@@ -71,7 +71,7 @@ const Wallet = ({ match }) => {
                 </>
               </div>
               <div>
-                <h4 className="text-primary-light f-oswald">
+                <h5 className="text-primary-light f-oswald">
                   Aliquam enim eros, egestas eget maximus eget, laoreet et lectus.
                   Vestibulum orci elit, bibendum id lectus non, posuere scelerisque
                   diam. Aenean ut leo finibus, luctus nunc nec, varius urna. Aliquam
@@ -79,9 +79,9 @@ const Wallet = ({ match }) => {
                   ligula egestas in. Curabitur rutrum, risus ut finibus malesuada,
                   ante urna pulvinar diam, quis aliquam ex sem vel diam. Sed ut ante
                   dapibus, posuere orci quis, ullamcorper lorem. Nulla facilisi.
-                </h4>
+                </h5>
                 <br />
-                <h4 className="text-primary-light f-oswald">
+                <h5 className="text-primary-light f-oswald">
                   Etiam at facilisis ex, sit amet ultrices nisl. Nunc ut ex
                   efficitur, consectetur massa non, vehicula tortor. Morbi nec mollis
                   nisi. Nunc hendrerit at augue quis ultricies. Maecenas lorem
@@ -92,11 +92,11 @@ const Wallet = ({ match }) => {
                   accumsan metus, ut maximus lacus libero sed nisl. Aenean iaculis
                   lacinia tortor in suscipit. Suspendisse erat massa, suscipit sed
                   metus ut, eleifend auctor purus. Suspendisse potenti.
-                </h4>
+                </h5>
               </div>
             </div>
             <CRow className="mt-5">
-              <CCol lg={6}>
+              <CCol lg={12} xl={6}>
                 <CForm
                   action=""
                   method="post"
@@ -107,8 +107,8 @@ const Wallet = ({ match }) => {
                     <CCol lg={12}>
                       <div className="d-flex">
                         <CLabel
-                          className="d-flex align-items-center mt-4"
-                          style={{ minWidth: 200 }}
+                          className="d-flex align-items-center mt-3"
+                          style={{ minWidth: 180 }}
                         >
                           Send NGL{" "}
                           <img
@@ -136,7 +136,7 @@ const Wallet = ({ match }) => {
                             </CFormGroup>
                           </CCol>
                         </CRow>
-                        <div className="d-flex align-items-center mt-3">
+                        <div className="d-flex align-items-center mt-2">
                           <CButton color="primary" className="ml-3" size="md">
                             Send
                           </CButton>
@@ -149,7 +149,7 @@ const Wallet = ({ match }) => {
                       <div className="d-flex align-items-center">
                         <CLabel
                           className="d-flex align-items-center mt-2"
-                          style={{ minWidth: 200 }}
+                          style={{ minWidth: 180 }}
                         >
                           Receive NGL{" "}
                           <img
@@ -176,7 +176,7 @@ const Wallet = ({ match }) => {
                   </CFormGroup>
                 </CForm>
               </CCol>
-              <CCol lg={6}>
+              <CCol lg={12} xl={6}>
                 <CForm
                   action=""
                   method="post"
@@ -187,8 +187,8 @@ const Wallet = ({ match }) => {
                     <CCol lg={12}>
                       <div className="d-flex">
                         <CLabel
-                          className="d-flex align-items-center mt-4"
-                          style={{ minWidth: 200 }}
+                          className="d-flex align-items-center mt-3 pl-4"
+                          style={{ minWidth: 180 }}
                         >
                           Send Item{" "}
                         </CLabel>
@@ -210,7 +210,7 @@ const Wallet = ({ match }) => {
                             </CFormGroup>
                           </CCol>
                         </CRow>
-                        <div className="d-flex align-items-center mt-3">
+                        <div className="d-flex align-items-center mt-2">
                           <CButton color="primary" className="ml-3" size="md">
                             Send
                           </CButton>
@@ -222,8 +222,8 @@ const Wallet = ({ match }) => {
                     <CCol lg={12}>
                       <div className="d-flex align-items-center">
                         <CLabel
-                          className="d-flex align-items-center mt-2"
-                          style={{ minWidth: 200 }}
+                          className="d-flex align-items-center mt-2 pl-4"
+                          style={{ minWidth: 180 }}
                         >
                           Receive Item{" "}
                         </CLabel>
@@ -250,7 +250,7 @@ const Wallet = ({ match }) => {
                 <div className="d-flex align-items-center">
                   <CLabel
                     className="d-flex align-items-center mt-2"
-                    style={{ minWidth: 200 }}
+                    style={{ minWidth: 180 }}
                   >
                     Ethereum key
                   </CLabel>

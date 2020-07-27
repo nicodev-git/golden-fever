@@ -10,15 +10,15 @@ button {
 	background-size: 100% 100%;
 	background-color: transparent !important;
 	border: none !important;
-	height: 37px !important;
-	padding: 5px 15px !important;
+	height: 30px !important;
+	padding: 3px 15px !important;
 	color: #120c05 !important;
-	font-size: 20px !important;
+	font-size: 16px !important;
 	outline: none !important;
 }
 
-button.btn-md { min-width: 150px; }
-button.btn-sm { min-width: 80px; }
+button.btn-md { min-width: 120px; }
+button.btn-sm { min-width: 60px; }
 
 .btn.disabled, .btn:disabled {
 	opacity: 0.4;
@@ -46,7 +46,7 @@ button:hover {
 
 
 p {
-	font-size: 20px;
+	font-size: 14px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -79,17 +79,17 @@ a:hover {
 }
 
 .form-group label {
-	font-size: 26px;
+	font-size: 20px;
 }
 
 input {
 	background-color: transparent !important;
 	background-image: url("../assets/images/inputBg.png");
 	background-size: 100% 100%;
-	height: 50px !important;
+	height: 40px !important;
 	border-radius: 0 !important;
 	border:none !important;
-	font-size: 28px !important;
+	font-size: 20px !important;
 	color: $text-default-light !important;
 }
 
@@ -126,16 +126,16 @@ hr {
 	left: -50%;
 	top: 0;
 	width: 150%;
-	height: 41px;
+	height: 35px;
 	opacity: 0.3;
 }
 
 .c-menu-info {
 	background-image: url("../assets/images/menuBg.png");
 	background-size: 100% 100%;
-	height: 60px;
+	height: 45px;
 	width: fit-content;
-	font-size: 32px;
+	font-size: 22px;
 	padding-left: 20px;
 	.item {
 		padding: 0 30px;
@@ -144,7 +144,7 @@ hr {
 		height: 100%;
 		justify-content: center;
 		align-items:center;
-		img { min-width: 25px; margin-right: 10px; }
+		img { min-width: 20px; margin-right: 10px; }
 	}
 
 	.item:not(:last-child) {
@@ -164,11 +164,11 @@ hr {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 240px;
+		height: 200px;
 	}
 	.bottom-bg {
 		width: 100%;
-		height: 570px;
+		height: 400px;
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -195,11 +195,11 @@ hr {
 
 	img.logo {
 		width: 100%;
-		max-width: 172px;
+		max-width: 130px;
 	}
 
 	a, span {
-	 	font-size: 20px;
+	 	font-size: 15px;
 	}
 
 	.c-menus li a{
@@ -211,6 +211,6 @@ hr {
 	    color: $text-default-light;
 	    position: absolute;
 	    right: 0px;
-	    top: 6px;
+	    top: 1px;
 	}
 }
