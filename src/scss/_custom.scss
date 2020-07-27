@@ -153,14 +153,40 @@ hr {
 }
 
 .c-default-layout {
-	background-image: url("../assets/images/back.png");
-	background-size: 100% 100%;
+	background-color: #0d0908;
+	.c-wrapper {
+		position: relative;
+	}
+	.top-bg {
+		background-image: url('../assets/images/topBg.png');
+		background-size: 100% 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 240px;
+	}
+	.bottom-bg {
+		width: 100%;
+		height: 570px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-size: 100% 100%;
+		background-image: url('../assets/images/bottomBg.png')
+	}
 }
 
 .c-default-layout footer {
 	background-color: transparent;
 	border-top: none;
 	height: auto;
+}
+
+.c-default-layout footer,
+.c-body {
+	position: relative;
+    z-index: 1;
 }
 
 .c-default-layout header {
