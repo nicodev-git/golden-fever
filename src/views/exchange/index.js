@@ -64,24 +64,38 @@ const Exchange = (props) => {
                 <Route
                   path={"/exchange/buy"}
                   exact={true}
-                  component={Buy}
+                  render={(props) => (
+                    <CFade>
+                      <Buy />
+                    </CFade>
+                   )}
                 />
                 <Route
                   path={"/exchange/sell"}
                   exact={true}
-                  component={Sell}
+                  render={(props) => (
+                    <CFade>
+                      <Sell />
+                    </CFade>
+                   )}
                 />
                 <Route
                   path={"/exchange/lend"}
-                  component={(props) => (
-                    <Buy />
-                  )}
+                  exact={true}
+                  render={(props) => (
+                    <CFade>
+                      <Buy />
+                    </CFade>
+                   )}
                 />
                 <Route
                   path={"/exchange/borrow"}
-                  component={(props) => (
-                    <Buy />
-                  )}
+                  exact={true}
+                  render={(props) => (
+                    <CFade>
+                      <Buy />
+                    </CFade>
+                   )}
                 />
               </Switch>
             </CCol>
