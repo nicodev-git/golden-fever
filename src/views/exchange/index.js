@@ -12,6 +12,7 @@ import {
   CLabel,
   CInput,
   CLink,
+  CFade
 } from "@coreui/react"
 import { Switch, Route } from "react-router-dom"
 import CIcon from "@coreui/icons-react"
