@@ -4,10 +4,11 @@ import cartIcon from "assets/images/cart.png"
 import goldIcon from "assets/images/gold.png"
 import julsIcon from "assets/images/juls.png"
 import darkCartIcon from "assets/images/dark-cart.png"
+import itemIcon from "assets/images/assetItem.png"
 
 const AssetCard = ({ data }) => (
   <div className="item-card px-4 py-5 text-center">
-    <img src={data.img} width="87" height="97" className="mx-auto mt-4" />
+    <img src={itemIcon} width="87" height="97" className="mx-auto mt-4" />
     {data.coupon ? (
       <div className="d-flex justify-content-between align-items-center  mt-3">
         <h6 className="text-left">{data.title}</h6>

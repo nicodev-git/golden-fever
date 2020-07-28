@@ -6,22 +6,10 @@
 			overflow: hidden;
 		}
 		// max-width: 315px;
-		  transition: 0.7s;
+		  transition: 0.5s;
 		  background-image: url('../../assets/images/selectedItemBg.png');
 		  background-size: 100% 0%;
 		  background-repeat: no-repeat;
-	}
-
-	.filter-links {
-		a {
-			padding: 0 10px;
-			font-size: 18px;
-			// line-height: 15px;
-		}
-
-		a:not(:last-child) {
-			border-right: 0.1em solid #fff5af;
-		}
 	}
 
 	.item-card:hover {

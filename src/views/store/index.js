@@ -129,11 +129,11 @@ const Store = (props) => {
         <CCol lg={4} className="ml-4">
           <Dropdown prefix="Sort by" menuList={SORT_MENU} callback={() => {}} />
         </CCol>
-        <CCol lg={4} className="text-center filter-links">
-          <CLink to={`/store/all`}>ALL</CLink>
-          <CLink to={`/store/cart`}>FILTER1</CLink>
-          <CLink to={`/store/buy`}>FILTER2</CLink>
-          <CLink to={`/store/all`}>FILTER3</CLink>
+        <CCol lg={4} className="text-center c-filter-links">
+          <CLink to={`/store/all`} active={filter==='all'}>ALL</CLink>
+          <CLink to={`/store/cart`} active={filter==='cart'}>FILTER1</CLink>
+          <CLink to={`/store/buy`} active={filter==='buy'}>FILTER2</CLink>
+          <CLink to={`/store/filter3`} active={filter==='filter3'}>FILTER3</CLink>
         </CCol>
         <CCol lg={4} />
       </CRow>

@@ -1,0 +1,28 @@
+.c-search {
+	position: relative;
+
+	input {
+		background-image: url('../../assets/images/searchInputBg.png');
+		min-height: 35px !important;
+		height: 35px !important;
+		min-width: 150px;
+		transition: 0.3s;
+	}
+
+	.search-icon {
+		position: absolute;
+		top: 8px;
+		left: 15px;
+	}
+
+	input:focus {
+		// margin-left: -100px;
+		min-width: 250px;
+
+		.search-icon {
+			left: -100px;
+		}
+	}
+
+	
+}
