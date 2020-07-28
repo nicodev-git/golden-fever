@@ -117,45 +117,20 @@ const SellPage = (props) => {
   console.log(props)
 
   return (
-    <div className="store-page pb-5 mb-5">
-      <CRow>
+    <>
+      <CRow className="">
         <CCol lg={12}>
-          <GeneralInfo />
-        </CCol>
-
-        <CCol lg={10} className="mx-auto">
-          <CRow className="p-2" style={{ marginTop: -30 }}>
-            <CCol lg={4}>
-              <Dropdown prefix="Category" menuList={SORT_MENU} callback={() => {}} />
-            </CCol>
-            <CCol lg={4} className="text-center">
-              <div className="d-flex align-items-center justify-content-center">
-                <div className="mr-3"><SearchInput callback={() => {}}/></div>
-                <div className="c-filter-links">
-                  <CLink to={`/buy`}>BUY</CLink>
-                  <CLink to={`/sell`}>SELL</CLink>
-                  <CLink to={`/borrow`}>BORROW</CLink>
-                  <CLink to={`/lend`}>LEND</CLink>
-                </div>
-              </div>
-            </CCol>
-            <CCol lg={4} />
-          </CRow>
-          <CRow className="px-3 pt-5 mt-2">
-            <CCol lg={12}>
-              <h4 className="mb-4">Your Marketplace:</h4>
-              <MarketPlaceTable items={ITEMS}/>
-            </CCol>
-          </CRow>
-          <CRow className="px-3">
-            <CCol lg={12}>
-              <h4 className="mb-4">Sell new item:</h4>
-              <SellItemTable items={SELL_ITEMS}/>
-            </CCol>
-          </CRow>
+          <h4 className="mb-3">Your Marketplace:</h4>
+          <MarketPlaceTable items={ITEMS}/>
         </CCol>
       </CRow>
-    </div>
+      <CRow className="">
+        <CCol lg={12}>
+          <h4 className="mb-3">Sell new item:</h4>
+          <SellItemTable items={SELL_ITEMS}/>
+        </CCol>
+      </CRow>
+    </>
   )
 }
 
