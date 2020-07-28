@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import {
   CCard,
   CCardBody,
@@ -11,7 +11,9 @@ import {
   CFormGroup,
   CLabel,
   CInput,
+  CLink,
 } from "@coreui/react"
+import { Switch, Route } from "react-router-dom"
 import CIcon from "@coreui/icons-react"
 import ChooseItem from "components/chooseItem/ChooseItem"
 import KeyGenerator from "components/keyGenerator/KeyGenerator"
@@ -54,6 +56,7 @@ const ITEMS = [
     ptype: "cart",
     currency: "USD",
     price: 12.99,
+    couponRate: 25,
     coupon: 9.99,
   },
   {
@@ -67,6 +70,7 @@ const ITEMS = [
     ptype: "cart",
     currency: "USD",
     price: 12.99,
+    couponRate: 25,
     coupon: 9.99,
   },
   {
@@ -80,7 +84,7 @@ const ITEMS = [
     ptype: "buy",
   },
   {
-    id: 4,
+    id: 5,
     img: itemIcon,
     title: "Object Name Here",
     description:
@@ -90,67 +94,7 @@ const ITEMS = [
     ptype: "buy",
   },
   {
-    id: 4,
-    img: itemIcon,
-    title: "Object Name Here",
-    description:
-      "Proin erat sapien, faucibus sit amet dignissim nec, feugiat eu lectus. Proin fringilla sed nibh eu vulputate. Nunc commodo leo rutrum dui pellentesque commodo. Praesent tristique nibh ac arcu fringilla tempus. Integer malesuada, turpis vitae fermentum hendrerit, enim nunc ullamcorper diam, vitae eleifend arcu erat ac lectus. Cras volutpat at metus porttitor venenatis. Curabitur finibus ac mi eget dignissim.",
-    gold: 80,
-    purchased: false,
-    ptype: "buy",
-  },
-  {
-    id: 4,
-    img: itemIcon,
-    title: "Object Name Here",
-    description:
-      "Proin erat sapien, faucibus sit amet dignissim nec, feugiat eu lectus. Proin fringilla sed nibh eu vulputate. Nunc commodo leo rutrum dui pellentesque commodo. Praesent tristique nibh ac arcu fringilla tempus. Integer malesuada, turpis vitae fermentum hendrerit, enim nunc ullamcorper diam, vitae eleifend arcu erat ac lectus. Cras volutpat at metus porttitor venenatis. Curabitur finibus ac mi eget dignissim.",
-    gold: 80,
-    purchased: false,
-    ptype: "buy",
-  },
-  {
-    id: 4,
-    img: itemIcon,
-    title: "Object Name Here",
-    description:
-      "Proin erat sapien, faucibus sit amet dignissim nec, feugiat eu lectus. Proin fringilla sed nibh eu vulputate. Nunc commodo leo rutrum dui pellentesque commodo. Praesent tristique nibh ac arcu fringilla tempus. Integer malesuada, turpis vitae fermentum hendrerit, enim nunc ullamcorper diam, vitae eleifend arcu erat ac lectus. Cras volutpat at metus porttitor venenatis. Curabitur finibus ac mi eget dignissim.",
-    gold: 80,
-    purchased: false,
-    ptype: "buy",
-  },
-  {
-    id: 4,
-    img: itemIcon,
-    title: "Object Name Here",
-    description:
-      "Proin erat sapien, faucibus sit amet dignissim nec, feugiat eu lectus. Proin fringilla sed nibh eu vulputate. Nunc commodo leo rutrum dui pellentesque commodo. Praesent tristique nibh ac arcu fringilla tempus. Integer malesuada, turpis vitae fermentum hendrerit, enim nunc ullamcorper diam, vitae eleifend arcu erat ac lectus. Cras volutpat at metus porttitor venenatis. Curabitur finibus ac mi eget dignissim.",
-    gold: 80,
-    purchased: false,
-    ptype: "buy",
-  },
-  {
-    id: 4,
-    img: itemIcon,
-    title: "Object Name Here",
-    description:
-      "Proin erat sapien, faucibus sit amet dignissim nec, feugiat eu lectus. Proin fringilla sed nibh eu vulputate. Nunc commodo leo rutrum dui pellentesque commodo. Praesent tristique nibh ac arcu fringilla tempus. Integer malesuada, turpis vitae fermentum hendrerit, enim nunc ullamcorper diam, vitae eleifend arcu erat ac lectus. Cras volutpat at metus porttitor venenatis. Curabitur finibus ac mi eget dignissim.",
-    gold: 80,
-    purchased: false,
-    ptype: "buy",
-  },
-  {
-    id: 4,
-    img: itemIcon,
-    title: "Object Name Here",
-    description:
-      "Proin erat sapien, faucibus sit amet dignissim nec, feugiat eu lectus. Proin fringilla sed nibh eu vulputate. Nunc commodo leo rutrum dui pellentesque commodo. Praesent tristique nibh ac arcu fringilla tempus. Integer malesuada, turpis vitae fermentum hendrerit, enim nunc ullamcorper diam, vitae eleifend arcu erat ac lectus. Cras volutpat at metus porttitor venenatis. Curabitur finibus ac mi eget dignissim.",
-    gold: 80,
-    purchased: false,
-    ptype: "buy",
-  },
-  {
-    id: 4,
+    id: 6,
     img: itemIcon,
     title: "Object Name Here",
     description:
@@ -161,10 +105,19 @@ const ITEMS = [
   },
 ]
 
-const Store = ({ match }) => {
+const Store = (props) => {
   const [items, setItems] = useState(ITEMS)
+  const [filter, saveFilter] = useState("all")
 
-  console.log(items)
+  useEffect(() => {
+    const { filter } = props.match.params
+    saveFilter(filter || "all")
+  })
+
+  const setFilter = (filter) => {
+    props.history.push(filter === "all" ? `/store/all` : `/store/${filter}`)
+  }
+
   return (
     <div className="store-page pb-5 mb-5">
       <CRow>
@@ -172,36 +125,34 @@ const Store = ({ match }) => {
           <GeneralInfo />
         </CCol>
       </CRow>
-      <CRow>
-        <CCol lg={11} className="mx-auto p-3">
-          <div className="d-flex">
-            <Dropdown prefix="Sort by" menuList={SORT_MENU} callback={() => {}} />
-          </div>
-          <CButton
-            onClick={() =>
-              setItems(
-                Object.assign(
-                  [],
-                  ITEMS.filter((itm) => itm.ptype === "buy")
-                )
-              )
-            }
-          >
-            Filter1
-          </CButton>
-          <CButton
-            onClick={() =>
-              setItems(
-                Object.assign(
-                  [],
-                  ITEMS.filter((itm) => itm.ptype === "cart")
-                )
-              )
-            }
-          >
-            Filter2
-          </CButton>
-          <AssetList items={items} />
+      <CRow className="p-4" style={{ marginTop: -40 }}>
+        <CCol lg={4} className="ml-4">
+          <Dropdown prefix="Sort by" menuList={SORT_MENU} callback={() => {}} />
+        </CCol>
+        <CCol lg={4} className="text-center filter-links">
+          <CLink to={`/store/all`}>ALL</CLink>
+          <CLink to={`/store/cart`}>FILTER1</CLink>
+          <CLink to={`/store/buy`}>FILTER2</CLink>
+          <CLink to={`/store/all`}>FILTER3</CLink>
+        </CCol>
+        <CCol lg={4} />
+      </CRow>
+      <CRow className="p-4">
+        <CCol lg={12}>
+          <Switch>
+            <Route
+              to={"/store/:filter"}
+              render={(props) => (
+                <AssetList
+                  items={
+                    filter === "all"
+                      ? ITEMS
+                      : ITEMS.filter((item) => item.ptype === filter)
+                  }
+                />
+              )}
+            />
+          </Switch>
         </CCol>
       </CRow>
     </div>

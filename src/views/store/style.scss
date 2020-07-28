@@ -1,17 +1,30 @@
 .store-page {
 	.item-card {
 		p {
-			font-size: 18px !important;
-			height: 100px;
+			font-size: 14px !important;
+			height: 80px;
 			overflow: hidden;
 		}
 		// max-width: 315px;
-		transition: opacity 200ms linear;
+		  transition: 0.7s;
+		  background-image: url('../../assets/images/selectedItemBg.png');
+		  background-size: 100% 0%;
+		  background-repeat: no-repeat;
+	}
+
+	.filter-links {
+		a {
+			padding: 0 10px;
+			font-size: 18px;
+			// line-height: 15px;
+		}
+
+		a:not(:last-child) {
+			border-right: 0.1em solid #fff5af;
+		}
 	}
 
 	.item-card:hover {
-		transition: 0.3s;
-		background-image: url('../../assets/images/selectedItemBg.png');
 		background-size: 100% 100%;
 	}
 }
