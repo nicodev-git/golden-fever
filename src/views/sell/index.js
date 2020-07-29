@@ -114,17 +114,21 @@ const SellPage = (props) => {
   const [items, setItems] = useState(ITEMS)
   const [filter, saveFilter] = useState("all")
 
-  console.log(props)
-
   return (
-
+    <>
       <CRow>
         <CCol lg={12}>
           <h4 className="mb-3">Your Marketplace:</h4>
           <MarketPlaceTable items={ITEMS}/>
         </CCol>
       </CRow>
-
+      <CRow className="mt-4">
+        <CCol lg={12}>
+          <h4 className="mb-3">Sell new item:</h4>
+          <SellItemTable items={SELL_ITEMS}/>
+        </CCol>
+      </CRow>
+    </>
   )
 }
 
