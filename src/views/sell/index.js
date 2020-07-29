@@ -117,20 +117,14 @@ const SellPage = (props) => {
   console.log(props)
 
   return (
-    <>
-      <CRow className="">
+
+      <CRow>
         <CCol lg={12}>
           <h4 className="mb-3">Your Marketplace:</h4>
           <MarketPlaceTable items={ITEMS}/>
         </CCol>
       </CRow>
-      <CRow className="">
-        <CCol lg={12}>
-          <h4 className="mb-3">Sell new item:</h4>
-          <SellItemTable items={SELL_ITEMS}/>
-        </CCol>
-      </CRow>
-    </>
+
   )
 }
 

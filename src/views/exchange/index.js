@@ -32,8 +32,9 @@ const SORT_MENU = [
 ]
 
 
-
 const Exchange = (props) => {
+  const { filter } = props.match.params
+
   return (
     <div className="store-page pb-5 mb-5">
       <CRow>
@@ -63,40 +64,40 @@ const Exchange = (props) => {
             <CCol lg={12}>
               <Switch>
                 <Route
-                  path={"/exchange/buy"}
-                  exact={true}
-                  render={(props) => (
+                  exact
+                  path="/exchange/buy"
+                  render={(props) => 
                     <CFade>
-                      <Buy />
+                      <Buy {...props} />
                     </CFade>
-                   )}
+                  }
                 />
                 <Route
-                  path={"/exchange/sell"}
-                  exact={true}
-                  render={(props) => (
+                  exact
+                  path="/exchange/sell"
+                  render={(props) => 
                     <CFade>
-                      <Sell />
+                      <Sell {...props} />
                     </CFade>
-                   )}
+                  }
                 />
                 <Route
-                  path={"/exchange/lend"}
-                  exact={true}
-                  render={(props) => (
+                  exact
+                  path="/exchange/lend"
+                  render={(props) => 
                     <CFade>
-                      <Buy />
+                      <Buy {...props} />
                     </CFade>
-                   )}
+                  }
                 />
                 <Route
-                  path={"/exchange/borrow"}
-                  exact={true}
-                  render={(props) => (
+                  exact
+                  path="/exchange/borrow"
+                  render={(props) => 
                     <CFade>
-                      <Buy />
+                      <Buy {...props} />
                     </CFade>
-                   )}
+                  }
                 />
               </Switch>
             </CCol>

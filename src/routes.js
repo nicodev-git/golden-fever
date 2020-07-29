@@ -8,12 +8,12 @@ const Sell = React.lazy(() => import("./views/sell"))
 const Exchange = React.lazy(() => import("./views/exchange"))
 
 const routes = [
-  { path: "/", exact: true, name: "Home" },
   { path: "/wallet", name: "Wallet", component: Wallet },
   { path: "/store/:filter", name: "Store", component: Store },
   { path: "/store", name: "Store", component: Store },
-  { path: "/store/:filter", name: "Store", component: Store },
+  { path: "/exchange/:filter", name: "Exchange", component: Exchange },
   { path: "/exchange", name: "Exchange", component: Exchange },
+  { path: "/", exact: true, name: "Home" },
 ]
 
 export default routes
