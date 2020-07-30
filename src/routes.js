@@ -1,10 +1,8 @@
 import React from "react"
 
-const Home = React.lazy(() => import("./views/wallet"))
+const Landing = React.lazy(() => import("./views/landing"))
 const Wallet = React.lazy(() => import("./views/wallet"))
 const Store = React.lazy(() => import("./views/store"))
-const Buy = React.lazy(() => import("./views/buy"))
-const Sell = React.lazy(() => import("./views/sell"))
 const Exchange = React.lazy(() => import("./views/exchange"))
 
 const routes = [
@@ -13,7 +11,7 @@ const routes = [
   { path: "/store", name: "Store", component: Store },
   { path: "/exchange/:filter", name: "Exchange", component: Exchange },
   { path: "/exchange", name: "Exchange", component: Exchange },
-  { path: "/", exact: true, name: "Home" },
+  { path: "/", name: "Home", component: Landing },
 ]
 
 export default routes

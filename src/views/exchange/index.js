@@ -23,6 +23,8 @@ import GeneralInfo from "components/generalInfo/GeneralInfo"
 
 const Buy = React.lazy(() => import("views/buy"))
 const Sell = React.lazy(() => import("views/sell"))
+const Borrow = React.lazy(() => import("views/borrow"))
+const Lend = React.lazy(() => import("views/lend"))
 
 
 const SORT_MENU = [
@@ -86,7 +88,7 @@ const Exchange = (props) => {
                   path="/exchange/lend"
                   render={(props) => 
                     <CFade>
-                      <Buy {...props} />
+                      <Lend {...props} />
                     </CFade>
                   }
                 />
@@ -95,7 +97,7 @@ const Exchange = (props) => {
                   path="/exchange/borrow"
                   render={(props) => 
                     <CFade>
-                      <Buy {...props} />
+                      <Borrow {...props} />
                     </CFade>
                   }
                 />
