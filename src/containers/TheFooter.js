@@ -1,5 +1,5 @@
 import React from "react"
-import { CFooter } from "@coreui/react"
+import { CFooter, CHeaderNav, CHeaderNavItem, CHeaderNavLink } from "@coreui/react"
 
 const TheFooter = () => {
   return (
@@ -8,7 +8,7 @@ const TheFooter = () => {
         Footer info here whatever is needed. Footer info here whatever is needed.
         Footer info here whatever is needed. Footer info here whatever is needed.
       </h5>
-      <p className="text-center f-oswald text-primary-dark w-90 mx-auto">
+      <p className="text-center f-oswald text-primary-dark w-90 mx-auto mb-1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum
         pulvinar tortor, sit amet vestibulum est. Aliquam tempor ac lectus a
         vestibulum. Cras sollicitudin sapien in neque elementum congue. Proin
@@ -20,6 +20,23 @@ const TheFooter = () => {
         id semper urna. Sed eget dolor ac mi ultricies mattis. Donec vitae elit
         molestie
       </p>
+      <CHeaderNav className="d-md-down-none c-menus mx-auto">
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink to="/investors">Investors</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink to="/aboutus">About Us</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink to="/press">Press Kit</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink to="/terms">Terms of Use</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink to="/policy">Privacy Policy</CHeaderNavLink>
+        </CHeaderNavItem>
+      </CHeaderNav>
     </CFooter>
   )
 }

@@ -7,29 +7,23 @@ import leftIcon from "assets/images/left.png"
 import rightIcon from "assets/images/right.png"
 import carouselDot from "assets/images/carousel-dot.png"
 
+import carouselItem from "assets/images/carouselItem.png"
+
 import "./style.scss"
 
 const CCarousel = () => {
   const [selectedIdx, setSelectedIdx] = React.useState(0)
-  const [slideOrder, setSlideOrder] = React.useState([
-    "s4",
-    "s5",
-    "s1",
-    "s2",
-    "s3",
-    "s6",
-  ])
+  const [slideOrder, setSlideOrder] = React.useState(["s4", "s5", "s1", "s2", "s3"])
   const [slideStyles, setSlideStyles] = React.useState({})
 
   const rotate = (slides) => {
-    const [s1, s2, s3, s4, s5, s6] = slides
+    const [s1, s2, s3, s4, s5] = slides
     setSlideStyles({
-      [s1]: { transform: "translateX(-60rem)", opacity: 0 },
-      [s2]: { transform: "translateX(-30rem)", opacity: 1 },
+      [s1]: { transform: "translateX(-80rem)", opacity: 0 },
+      [s2]: { transform: "translateX(-40rem)", opacity: 1 },
       [s3]: { transform: "translateX(0)", opacity: 1 },
-      [s4]: { transform: "translateX(30rem)", opacity: 1 },
-      [s5]: { transform: "translateX(60rem)", opacity: 0 },
-      [s6]: { transform: "translateX(60rem)", opacity: 0 },
+      [s4]: { transform: "translateX(40rem)", opacity: 1 },
+      [s5]: { transform: "translateX(80rem)", opacity: 0 },
     })
     setSlideOrder(slides)
   }
@@ -120,13 +114,13 @@ const slides = [
     title: "Efren Reyes",
     desc:
       'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around player of all time.',
-    image: "https://i.postimg.cc/RhYnBf5m/er-slider.jpg",
+    image: carouselItem,
   },
   {
     id: 2,
     title: `Ronnie O'Sullivan`,
     desc: `Ronnie O'Sullivan professional snooker player who is widely regarded as one of the greatest players in the history of the discipline.`,
-    image: "https://i.postimg.cc/qBGQNc37/ro-slider.jpg",
+    image: carouselItem,
   },
   {
     id: 3,
@@ -134,14 +128,13 @@ const slides = [
     desc:
       'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
 
-    image: "https://i.postimg.cc/cHdMJQKG/svb-slider.jpg",
+    image: carouselItem,
   },
   {
     id: 4,
     title: "Mike Sigel",
     desc: `Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.`,
-
-    image: "https://i.postimg.cc/C12h7nZn/ms-1.jpg",
+    image: carouselItem,
   },
   {
     id: 5,
@@ -149,15 +142,7 @@ const slides = [
     desc:
       'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
 
-    image: "https://i.postimg.cc/NfzMDVHP/willie-mosconi-slider.jpg",
-  },
-  {
-    id: 6,
-    title: "Willie Mosconi",
-    desc:
-      'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
-
-    image: "https://i.postimg.cc/NfzMDVHP/willie-mosconi-slider.jpg",
+    image: carouselItem,
   },
 ]
 

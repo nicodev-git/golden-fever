@@ -13,6 +13,8 @@ import {
   CInput,
 } from "@coreui/react"
 import CIcon from "@coreui/icons-react"
+import { DndProvider } from "react-dnd"
+import { HTML5Backend } from "react-dnd-html5-backend"
 import ChooseItem from "components/chooseItem/ChooseItem"
 import KeyGenerator from "components/keyGenerator/KeyGenerator"
 
@@ -35,7 +37,7 @@ const MedallionsData = [
     title: "VIP Access",
     subtitle: "Tier",
     line: true,
-    medallions: ["done", "empty", "empty"],
+    medallions: ["lock", "empty", "empty"],
   },
   {
     title: "Discount",
@@ -47,7 +49,7 @@ const MedallionsData = [
     title: "Merchant",
     subtitle: "Advance",
     line: false,
-    medallions: ["done", "empty", "current"],
+    medallions: ["lock", "empty", "burn"],
   },
   {
     title: "Guilds",
@@ -57,40 +59,42 @@ const MedallionsData = [
   },
 ]
 
-const MedallionsData1 = ["done", "done", "done", "current"]
+const MedallionsData1 = ["lock", "lock", "lock", "burn"]
 
 const Rights = ({ match }) => {
   return (
-    <div className="rights-page pb-5 mb-5">
-      <CRow>
-        <CCol lg={12}>
-          <GeneralInfo />
-        </CCol>
-        <CCol lg={10} className="mx-auto p-3">
-          <h4>Rights:</h4>
-          <hr />
-          <section className="pt-3 px-3">
-            <div className="d-flex">
-              <div className="main" style={{ flex: 1 }}>
-                <div className="d-flex justify-content-between">
-                  <LockNGL />
-                  <BurnNGL />
+    <DndProvider backend={HTML5Backend}>
+      <div className="rights-page pb-5 mb-5">
+        <CRow>
+          <CCol lg={12}>
+            <GeneralInfo />
+          </CCol>
+          <CCol lg={10} className="mx-auto p-3">
+            <h4>Rights:</h4>
+            <hr />
+            <section className="pt-3 px-3">
+              <div className="d-flex">
+                <div className="main" style={{ flex: 1 }}>
+                  <div className="d-flex justify-content-between">
+                    <LockNGL />
+                    <BurnNGL />
+                  </div>
+                  <div className="medallions-list mt-5">
+                    {MedallionsData.map((medallion) => (
+                      <HMedallions data={medallion} />
+                    ))}
+                  </div>
                 </div>
-                <div className="medallions-list mt-5">
-                  {MedallionsData.map((medallion) => (
-                    <HMedallions data={medallion} />
-                  ))}
+                <div className="medallions-diagram">
+                  <VMedallions medallions={MedallionsData1} />
                 </div>
               </div>
-              <div className="medallions-diagram">
-                <VMedallions medallions={MedallionsData1} />
-              </div>
-            </div>
-          </section>
-          <hr />
-        </CCol>
-      </CRow>
-    </div>
+            </section>
+            <hr />
+          </CCol>
+        </CRow>
+      </div>
+    </DndProvider>
   )
 }
 

@@ -51,16 +51,16 @@ const TheHeader = () => {
 
       <CHeaderNav className="d-md-down-none c-menus">
         <CHeaderNavItem className="px-3">
-          <CHeaderNavLink to="/dashboard">Backers</CHeaderNavLink>
-        </CHeaderNavItem>
-        <CHeaderNavItem className="px-3">
-          <CHeaderNavLink to="/buy">Investors</CHeaderNavLink>
+          <CHeaderNavLink to="/rights">Rights</CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
           <CHeaderNavLink to="/store">Store</CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
           <CHeaderNavLink to="/exchange/buy">Exchange</CHeaderNavLink>
+        </CHeaderNavItem>
+        <CHeaderNavItem className="px-3">
+          <CHeaderNavLink to="/host">Maps</CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
           <CHeaderNavLink to="/wallet">Wallet</CHeaderNavLink>

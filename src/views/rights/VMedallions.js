@@ -1,4 +1,6 @@
 import React from "react"
+import { DragSource } from "react-dnd"
+import DragItem from "./DragItem"
 
 const VMedallions = ({ medallions }) => {
   return (
@@ -7,7 +9,11 @@ const VMedallions = ({ medallions }) => {
         Medallions
         <div className="medallions-holder">
           {medallions.map((medal, key) => (
-            <div key={key} className={`medallion-item ${medal}`} />
+            <DragItem
+              key={key}
+              className={`medallion-item ${medal}`}
+              medal={medal}
+            />
           ))}
         </div>
       </h5>
