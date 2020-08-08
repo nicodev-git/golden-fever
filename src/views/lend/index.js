@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react"
-import {
-  CCol,
-  CRow
-} from "@coreui/react"
+import { CCol, CRow } from "@coreui/react"
 
-import MarketPlaceTable from './marketPlaceTable'
-import LendItemTable from './lendItemTable'
+import MarketPlaceTable from "./marketPlaceTable"
+import LendItemTable from "./lendItemTable"
 
 const ITEMS = [
   {
@@ -14,11 +11,11 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: '',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "",
+    action: "",
   },
   {
     id: 2,
@@ -26,11 +23,11 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: '',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "",
+    action: "",
   },
   {
     id: 3,
@@ -38,11 +35,11 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: 'LoremIpsume',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "LoremIpsume",
+    action: "",
   },
   {
     id: 4,
@@ -50,11 +47,11 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: 'LoremIpsume',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "LoremIpsume",
+    action: "",
   },
   {
     id: 5,
@@ -62,11 +59,11 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: 'LoremIpsume',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "LoremIpsume",
+    action: "",
   },
   {
     id: 6,
@@ -74,11 +71,11 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: 'LoremIpsume',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "LoremIpsume",
+    action: "",
   },
   {
     id: 7,
@@ -86,14 +83,13 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: '',
-    action: ''
-  }
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "",
+    action: "",
+  },
 ]
-
 
 const LEND_ITEMS = [
   {
@@ -102,11 +98,11 @@ const LEND_ITEMS = [
     level: "-",
     quantity: "1",
     status: "-",
-    value: '125',
-    interest: '',
-    period: '2',
-    detail: '',
-    action: ''
+    value: "125",
+    interest: "",
+    period: "2",
+    detail: "",
+    action: "",
   },
 ]
 
@@ -119,13 +115,13 @@ const LendPage = (props) => {
       <CRow>
         <CCol lg={12}>
           <h4 className="mb-3">Your Marketplace:</h4>
-          <MarketPlaceTable items={ITEMS}/>
+          <MarketPlaceTable items={ITEMS} />
         </CCol>
       </CRow>
       <CRow className="mt-4">
         <CCol lg={12}>
           <h4 className="mb-3">Lend an item:</h4>
-          <LendItemTable items={LEND_ITEMS}/>
+          <LendItemTable items={LEND_ITEMS} />
         </CCol>
       </CRow>
     </>

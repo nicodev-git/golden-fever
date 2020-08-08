@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react"
-import {
-  CCol,
-  CRow
-} from "@coreui/react"
+import { CCol, CRow } from "@coreui/react"
 
-import MarketPlaceTable from './marketPlaceTable'
-import SellItemTable from './sellItemTable'
-
+import MarketPlaceTable from "./marketPlaceTable"
+import SellItemTable from "./sellItemTable"
 
 const ITEMS = [
   {
@@ -15,8 +11,8 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
   {
     id: 2,
@@ -24,8 +20,8 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
   {
     id: 3,
@@ -33,8 +29,8 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
   {
     id: 4,
@@ -42,8 +38,8 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
   {
     id: 5,
@@ -51,8 +47,8 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
   {
     id: 6,
@@ -60,8 +56,8 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
   {
     id: 7,
@@ -69,9 +65,9 @@ const ITEMS = [
     level: "1",
     quantity: "1",
     status: "New",
-    price: '125',
-    action: ''
-  }
+    price: "125",
+    action: "",
+  },
 ]
 
 const SELL_ITEMS = [
@@ -81,8 +77,8 @@ const SELL_ITEMS = [
     level: "-",
     quantity: "1",
     status: "-",
-    price: '125',
-    action: ''
+    price: "125",
+    action: "",
   },
 ]
 
@@ -95,13 +91,13 @@ const SellPage = (props) => {
       <CRow>
         <CCol lg={12}>
           <h4 className="mb-3">Your Marketplace:</h4>
-          <MarketPlaceTable items={ITEMS}/>
+          <MarketPlaceTable items={ITEMS} />
         </CCol>
       </CRow>
       <CRow className="mt-4">
         <CCol lg={12}>
           <h4 className="mb-3">Sell new item:</h4>
-          <SellItemTable items={SELL_ITEMS}/>
+          <SellItemTable items={SELL_ITEMS} />
         </CCol>
       </CRow>
     </>

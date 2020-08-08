@@ -12,7 +12,7 @@ import {
   CLabel,
   CInput,
   CLink,
-  CFade
+  CFade,
 } from "@coreui/react"
 import { Switch, Route } from "react-router-dom"
 import CIcon from "@coreui/icons-react"
@@ -26,13 +26,11 @@ const Sell = React.lazy(() => import("views/sell"))
 const Borrow = React.lazy(() => import("views/borrow"))
 const Lend = React.lazy(() => import("views/lend"))
 
-
 const SORT_MENU = [
   { title: "All", value: "all" },
   { title: "Menu1", value: "price1" },
   { title: "Menu2", value: "price2" },
 ]
-
 
 const Exchange = (props) => {
   const { filter } = props.match.params
@@ -51,7 +49,9 @@ const Exchange = (props) => {
             </CCol>
             <CCol lg={4} className="text-center">
               <div className="d-flex align-items-center justify-content-center">
-                <div className="mr-3"><SearchInput callback={() => {}}/></div>
+                <div className="mr-3">
+                  <SearchInput callback={() => {}} />
+                </div>
                 <div className="c-filter-links">
                   <CLink to={`/exchange/buy`}>BUY</CLink>
                   <CLink to={`/exchange/sell`}>SELL</CLink>
@@ -68,38 +68,38 @@ const Exchange = (props) => {
                 <Route
                   exact
                   path="/exchange/buy"
-                  render={(props) => 
+                  render={(props) => (
                     <CFade>
                       <Buy {...props} />
                     </CFade>
-                  }
+                  )}
                 />
                 <Route
                   exact
                   path="/exchange/sell"
-                  render={(props) => 
+                  render={(props) => (
                     <CFade>
                       <Sell {...props} />
                     </CFade>
-                  }
+                  )}
                 />
                 <Route
                   exact
                   path="/exchange/lend"
-                  render={(props) => 
+                  render={(props) => (
                     <CFade>
                       <Lend {...props} />
                     </CFade>
-                  }
+                  )}
                 />
                 <Route
                   exact
                   path="/exchange/borrow"
-                  render={(props) => 
+                  render={(props) => (
                     <CFade>
                       <Borrow {...props} />
                     </CFade>
-                  }
+                  )}
                 />
               </Switch>
             </CCol>

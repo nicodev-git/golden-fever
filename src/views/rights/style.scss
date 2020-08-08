@@ -1,0 +1,144 @@
+.rights-page {
+	.medallion-modal {
+		background-image: url('../../assets/images/modalBg.png');
+	}
+
+	.medallions-diagram {
+		.medallions-holder {
+			background-image: url('../../assets/images/holder.png');
+			background-size: 100% 100%;
+			height: 450px;
+			width: 180px;
+			padding-top: 25px;
+		}
+
+		.medallion-item {
+			width: 97%;
+			margin: 0 auto;
+			height: 50px;
+			background-size: 100% 100%;
+			margin-bottom: 3px;
+		}
+
+		.medallion-item.done {
+			background-image: url('../../assets/images/VmedallionDone.png');
+		}
+
+		.medallion-item.current {
+			background-image: url('../../assets/images/VmedallionCurrent.png');
+		}
+	}
+	
+	.lock-ngl {
+		background-image: url('../../assets/images/lock.png');
+		background-size: 100% 100%;
+		height: 224px;
+		width: 450px;
+		position: relative;
+
+		.ngl {
+			position: absolute;
+		    top: 68px;
+		    right: 52px;
+		    width: 105px;
+
+		    input {
+		    	text-align: center;
+		    	margin-bottom: 14px;
+		    }
+
+			button {
+				width: 100%;
+			}
+		}
+
+		.locktime-counter {
+			width: 180px;
+			position: absolute;
+			top: 71px;
+    		left: 5px;
+
+			button:hover {
+				box-shadow: none;
+			}
+
+			.counter-left {
+				background-image: url("../../assets/images/arrowLeft.png")
+			}
+
+			.counter-right {
+				background-image: url("../../assets/images/arrowRight.png")
+			}
+		}
+	}
+
+	.burn-ngl {
+		background-image: url('../../assets/images/burn.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 250px 100%;
+		margin-top: -10px;
+		height: 220px;
+		width: 500px;
+
+		.ngl {
+			width: 105px;
+			margin-top: 80px;	
+		}
+	}
+
+	.hmedallions-cell {
+		button {
+			background-image: url('../../assets/images/buttonBk1.png');
+		}
+
+		button:hover {
+			box-shadow: none !important;
+		}
+
+		.diagram {
+			background-image: url('../../assets/images/hholder.png');
+		}
+
+		.diagram-line {
+			background-image: url('../../assets/images/hholderLine.png');
+		}
+
+		.diagram,
+		.diagram-line {
+			position: relative;
+			background-size: 100% 100%;
+			width: 150px;
+			height: 35px;
+			cursor: pointer;
+
+			.cell {
+				background-size: 100% 100%;
+				cursor: pointer;
+			}
+
+			.cell.done {
+				background-image: url('../../assets/images/HmedallionDone.png');
+				height: 41px;
+				margin-top: -3px;
+				width: 113px;
+				margin-left: 38px;
+			}
+
+			.cell.current {
+				background-image: url('../../assets/images/HmedallionCurrent.png');
+				margin-top: 1px;
+				height: 33px;
+				width: 113px;
+				margin-left: 39px;
+			}
+
+			.key {
+				font-size: 10px;
+				position: absolute;
+				top: -5px;
+				left: 40px;
+			}
+		}
+	}
+}
